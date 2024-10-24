@@ -7,7 +7,8 @@ class TicTacToe : public Game {
 public:
 	void Display() const {
 		//Display Board
-		std::cout << board[0] << "|" << board[1] << "|" << board[2] << "\n"
+		std::cout
+			<< board[0] << "|" << board[1] << "|" << board[2] << "\n"
 			<< "------" << "\n"
 			<< board[3] << "|" << board[4] << "|" << board[5] << "\n"
 			<< "------" << "\n"
@@ -31,7 +32,7 @@ public:
 		if (board[6] == board[7] && board[7] == board[8]) { std::cout << "Player " << player << " has won! "; return true; }
 
 		//Since no one won yet, check if board is full; if so, game is over.
-		if (turn == 9) { std::cout << "It's a tie!";  return true; }
+		if (turn == 9) { std::cout << "It's a tie! ";  return true; }
 
 		//If none of the above have returned true, the game is still on.
 		return false;
